@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+        defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+        defer></script>
+    <script src="./assets/js/main.js" defer></script>
+    <title>Home</title>
+
+
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="menu">
+            <div class="sections" onclick="goto('home')">
+                <img src="./assets/img/Logo.png" alt="">
+                <h6>Dashboard</h6>
+            </div>
+            <div class="sections" onclick="goto('loans')">
+                <img class="transparent-right" src="./assets/img/section-loan.png" alt="">
+                <h6>Loan</h6>
+            </div>
+            <div class="sections">
+                <img class="transparent-right" src="./assets/img/section-company.png" alt="">
+                <h6>Company</h6>
+            </div>
+            <div class="sections">
+                <img class="transparent-right" src="./assets/img/section-property.png" alt="">
+                <h6>Property</h6>
+            </div>
+        </div>
+
+        <div class="profile">
+            <h6 class="fw-l">Mrs. Khaula Rashid </h6>
+        </div>
+    </nav>
+    <section>
+        <div class="dashboard-poster" onclick="goto('loans')">
+            <img class="transparent-right" src="./assets/img/section-loan.png" alt="" srcset="">
+            <h3 class="fw-b">My Loans</h3>
+            <div style="display:flex; justify-content: space-between; box-sizing: border-box; height: 100%;">
+                <div class="dashboard x1">
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Issued</h6>
+                        <h4 class="fw-b">AED 200000</h4>
+                    </div>
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Recieved</h6>
+                        <h4 class="fw-b">AED 20000</h4>
+                    </div>
+                    <div class="dashboard-card x2">
+                        <h6 class="fw-l">Pending Loans</h6>
+                        <h4 class="fw-b">20</h4>
+                    </div>
+                </div>
+                <div class="graphs">
+                    <img src="./assets/img/dummy-graph.svg" style="height:100%; width:100%; ">
+                    <h5 class="regular">Total loans issued/recieved</h5>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-poster" onclick="goto('loans')">
+            <img class="transparent-right" src="./assets/img/section-company.png" alt="" srcset="">
+            <h3 class="fw-b">Properties</h3>
+            <div style="display:flex; justify-content: space-between; box-sizing: border-box; height: 100%;">
+                <div class="dashboard x1">
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Issued</h6>
+                        <h4 class="fw-b">AED 200000</h4>
+                    </div>
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Recieved</h6>
+                        <h4 class="fw-b">AED 20000</h4>
+                    </div>
+                    <div class="dashboard-card x2">
+                        <h6 class="fw-l">Pending Loans</h6>
+                        <h4 class="fw-b">20</h4>
+                    </div>
+                </div>
+                <div class="graphs">
+                    <img src="./assets/img/dummy-graph.svg" style="height:100%; width:100%; ">
+                    <h5 class="regular">Total loans issued/recieved</h5>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-poster" onclick="goto('loans')">
+            <img class="transparent-right" src="./assets/img/section-property.png" alt="" srcset="">
+            <h3 class="fw-b">Company</h3>
+            <div style="display:flex; justify-content: space-between; box-sizing: border-box; height: 100%;">
+                <div class="dashboard x1">
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Issued</h6>
+                        <h4 class="fw-b">AED 200000</h4>
+                    </div>
+                    <div class="dashboard-card x1">
+                        <h6 class="fw-l">Loan Recieved</h6>
+                        <h4 class="fw-b">AED 20000</h4>
+                    </div>
+                    <div class="dashboard-card x2">
+                        <h6 class="fw-l">Pending Loans</h6>
+                        <h4 class="fw-b">20</h4>
+                    </div>
+                </div>
+                <div class="graphs">
+                    <img src="./assets/img/dummy-graph.svg" style="height:100%; width:100%; ">
+                    <h5 class="regular">Total loans issued/recieved</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
