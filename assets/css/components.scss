@@ -175,29 +175,58 @@ thead {
 }
 
 .modal {
+    overflow: hidden;
     width: fit-content;
     height: fit-content;
-    top: 0;
-    left: 0;
-    gap: 10px;
+
+
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    align-items: end;
+
+    align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     // backdrop-filter: blur(5px);
 
     // height: 100vh;
     // padding: 100px;
-    border-radius: 20px;
+
     opacity: 1;
     transition: all 3s;
-    background-color: #fff;
+
+    // background-color: #fff;
+    &-content {
+        border-radius: 30px;
+        background-color: #fff;
+    }
+
+    &-header {
+        // border {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+
+        // }
 
 
-    .content {
+        justify-content: center;
+        background-color: $primary;
+        color: $darkPrimary;
+
+        font: {
+            size: 2rem;
+            weight: 500;
+
+
+        }
+
+        // text-align: center;
+    }
+
+    .loan-details-content {
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #fff;
         grid-template-columns: repeat(2, 1fr);
         display: grid;
         width: 1000px;
@@ -209,13 +238,15 @@ thead {
     }
 
     form {
+        padding: 20px;
+        border-radius: 20px;
+        background-color: #fff;
         gap: 10px;
         display: flex;
         padding: 50px 150px;
         position: relative;
         max-height: 80vh;
         flex-direction: column;
-        background-color: transparent;
 
         .form-title {
             // top: 15px;
@@ -227,12 +258,20 @@ thead {
         }
 
         input {
-            background-color: #E6D4C0;
+            background-color: $veryLightPrimary;
+            border: 2px solid $primary;
+            color: $darkPrimary;
+
+            &::placeholder {
+                color: #beb9b9;
+            }
+
         }
 
         input[type=submit] {
             color: #fff;
             background-color: $darkPrimary;
+
         }
     }
 }
