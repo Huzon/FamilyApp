@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://kit.fontawesome.com/84cd854e91.js" defer crossorigin="anonymous" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+
+    <title>Loans</title>
+
+
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="menu">
+            <div class="sections" onclick="goto('home')">
+                <img src="./assets/img/Logo.png" alt="">
+                <h6>Dashboard</h6>
+            </div>
+            <div class="sections" onclick="goto('loans')">
+                <img class="transparent-right" src="./assets/img/section-loan.png" alt="">
+                <h6>Loan</h6>
+            </div>
+            <div class="sections selected" onclick="goto('company')">
+                <img class="transparent-right" src="./assets/img/section-company.png" alt="">
+                <h6>Company</h6>
+            </div>
+            <div class="sections">
+                <img class="transparent-right" src="./assets/img/section-property.png" alt="">
+                <h6>Property</h6>
+            </div>
+        </div>
+
+        <div class="profile">
+            <h6 class="fw-l">Mrs. Khaula Rashid </h6>
+        </div>
+    </nav>
+
+    <section class='detailsTab' id="companyHistory">
+        <!-- h1 -->
+        <div class="dashboard">
+            <div class="dashboard-card gc-span-1">
+                <h6 class="fw-l">Loan Issued</h6>
+                <h4 class="fw-b">AED 200000</h4>
+            </div>
+            <div class="dashboard-card gc-span-1">
+                <h6 class="fw-l">Loan Recieved</h6>
+                <h4 class="fw-b">AED 20000</h4>
+            </div>
+            <div class="dashboard-card gc-span-2">
+                <h6 class="fw-l">Pending Loans</h6>
+                <h4 class="fw-b">20</h4>
+            </div>
+        </div>
+        <div class="graphs">
+            <img src="./assets/img/dummy-graph.svg" style="height:100%; width:100%; ">
+            <h5 class="regular">Total loans issued/recieved</h5>
+        </div>
+        <div class="loans gc-span-2">
+            <div class="history">
+                <h3>Loan History</h3>
+                <div class="filters">
+                    <div class="filter-btns">
+                        <button class="filter selected">Pending</button>
+                        <button class="filter">Approved</button>
+                    </div>
+                    <form action=""><input type="text" class="search" name="search" id="search" placeholder="Search">
+                    </form>
+                </div>
+                <!-- loan tile -->
+                <div class="tiles">
+                    <div class="tile">
+                        <div>
+                            <h5>LOANREQ2022#1</h5>
+                            <h6>18.04.2023</h6>
+                            <h6>Remarks : “FINANCE CANCELLED”</h6>
+                        </div>
+                        <div>
+                            <h5>AED 500000</h5>
+                            <h6>5 Years</h6>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div>
+                            <h5>LOANREQ2022#1</h5>
+                            <h6>18.04.2023</h6>
+                            <h6>Remarks : “FINANCE CANCELLED”</h6>
+                        </div>
+                        <div>
+                            <h5>AED 500000</h5>
+                            <h6>5 Years</h6>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div>
+                            <h5>LOANREQ2022#1</h5>
+                            <h6>18.04.2023</h6>
+                            <h6>Remarks : “FINANCE CANCELLED”</h6>
+                        </div>
+                        <div>
+                            <h5>AED 500000</h5>
+                            <h6>5 Years</h6>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div>
+                            <h5>LOANREQ2022#1</h5>
+                            <h6>18.04.2023</h6>
+                            <h6>Remarks : “FINANCE CANCELLED”</h6>
+                        </div>
+                        <div>
+                            <h5>AED 500000</h5>
+                            <h6>5 Years</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table style="width:100%;" cellspacing=0>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Requester</th>
+                            <th>Tenure</th>
+                            <th>Requested Amount</th>
+                            <th>Issued Amount</th>
+                            <th>Returned Amount</th>
+                            <!-- <th>Request Comments</th>
+                            <th>Finance Comments</th>
+                            <th>Approver Comments</th> -->
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody style="overflow-y: scroll;">
+                        <tr class="modal-toggle">
+                            <td>01-Jan-2023</td>
+                            <td>Mrs. Khaoula Rashid Murad al Balooshi</td>
+                            <td>5 yr</td>
+                            <td>100000 AED</td>
+                            <td>5000 AED</td>
+                            <td>1000 AED</td>
+                            <!-- <td>Require for personal use</td>
+                            <td>Loan Approved</td>
+                            <td>Loan has been approved</td> -->
+                            <td>Approved Approved</td>
+                        </tr>
+                        <tr class="modal-toggle">
+                            <td>01-Jan-2023</td>
+                            <td>Mrs. Khaoula Rashid Murad al Balooshi</td>
+                            <td>5 yr</td>
+                            <td>100000 AED</td>
+                            <td>5000 AED</td>
+                            <td>1000 AED</td>
+                            <!-- <td>Require for personal use</td>
+                            <td>Loan Approved</td>
+                            <td>Loan has been approved</td> -->
+                            <td>Approved Approved</td>
+                        </tr>
+                        <tr class="modal-toggle">
+                            <td>01-Jan-2023</td>
+                            <td>Mrs. Khaoula Rashid Murad al Balooshi</td>
+                            <td>5 yr</td>
+                            <td>100000 AED</td>
+                            <td>5000 AED</td>
+                            <td>1000 AED</td>
+                            <!-- <td>Require for personal use</td>
+                            <td>Loan Approved</td>
+                            <td>Loan has been approved</td> -->
+                            <td>Approved Approved</td>
+                        </tr>
+                        <tr class="modal-toggle">
+                            <td>01-Jan-2023</td>
+                            <td>Mrs. Khaoula Rashid Murad al Balooshi</td>
+                            <td>5 yr</td>
+                            <td>100000 AED</td>
+                            <td>5000 AED</td>
+                            <td>1000 AED</td>
+                            <!-- <td>Require for personal use</td>
+                            <td>Loan Approved</td>
+                            <td>Loan has been approved</td> -->
+                            <td>Approved Approved</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <button aria-readonly="true" id="addLoan" class="floating-btn add-btn modal-toggle">
+        <i class="fa fa-plus"></i>
+    </button>
+    <div class="modal ">
+        <div class="close-modal-btn modal-toggle">
+            <i class="fa fa-close"></i>
+        </div>
+        <form action="">
+            <h3 class="form-title fw-b">
+                Request Loan
+            </h3>
+
+            <input type="text" name="RequesterName" id="" placeholder="Name">
+            <input type="text" name="" id="" placeholder="Amount">
+            <input type="text" name="" id="" placeholder="Tenure">
+            <input type="text" name="" id="" placeholder="Comments">
+            <input type="submit" value="Submit" name="submit" class="modal-toggle">
+        </form>
+
+    </div>
+    <div class="modal modal2 ">
+        <div class="close-modal-btn modal-toggle">
+            <i class="fa fa-close"></i>
+        </div>
+        <form action=""
+            style="grid-template-columns: repeat(2, 1fr); display:grid; width: 1000px;max-height: 80vh;overflow-y: scroll;background-color: #fff;row-gap: 20px; column-gap: 50px;">
+            <h3 class="form-title fw-b gold-txt">
+                Loan Details - #1212
+            </h3>
+            <!-- <div class="detail-tile">
+                <h6>Loan ID</h6>
+                <h5>1212</h5>
+            </div> -->
+            <div class="detail-tile">
+                <h6>Requester Name</h6>
+                <h5>Mrs. Khaula Rashid</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Status</h6>
+                <h5>Approved</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Requster Comment</h6>
+                <h5>Require loan for personal user</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Tenure</h6>
+                <h5>10 yrs</h5>
+            </div>
+
+            <div class="detail-tile">
+                <h6>Issued Amount</h6>
+                <h5>AED 20000</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Recieved Amount</h6>
+                <h5>AED 10000</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Finance Name</h6>
+                <h5>NA</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Finance Comment</h6>
+                <h5>NA</h5>
+            </div>
+            <div class="detail-tile">
+                <h6>Approver Name</h6>
+                <h5>NA</h5>
+            </div>
+
+            <div class="detail-tile">
+                <h6>Approver Comment</h6>
+                <h5>NA</h5>
+            </div>
+            <div class="accordion accordion-flush" style="grid-column: 1/span 2;" id="accordionFlushExample">
+                <div class="accordion-item ">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Loan Issue Logs
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Issued Amount</th>
+                                        <th>Issued By</th>
+                                        <th>Issuer Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Loan Recieved log
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body p-0">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Issued Amount</th>
+                                        <th>Issued By</th>
+                                        <th>Issuer Remarks</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12/02/2022</td>
+                                        <td>5000000</td>
+                                        <td>Huzefa</td>
+                                        <td>Issued 50% amount</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+    <script>
+        $(".modal-toggle").click(
+            function () {
+                if ($(".modal2").toggleClass("showModal"));
+            }
+
+        )
+
+        function openModal() {
+            $(".modal2").addClass('showModal');
+            $(".modal2").removeClass('hideModal');
+        }
+        function closeModal() {
+            $(".modal2").addClass('showModal');
+            $(".modal2").removeClass('hideModal');
+        }
+    </script>
+
+</body>
+
+</html>

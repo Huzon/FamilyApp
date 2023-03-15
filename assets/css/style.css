@@ -11,8 +11,12 @@ p {
   padding: 0;
 }
 
-.gold {
+.gold-txt {
   color: rgb(184, 135, 79);
+}
+
+.light-txt {
+  color: #808080;
 }
 
 h1,
@@ -57,17 +61,55 @@ h6 {
   font-weight: 600;
 }
 
+.bg-primary {
+  background-color: red;
+}
+
+.accordion-button {
+  background-color: rgb(255, 250, 244);
+}
+
+.accordion-button:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgb(248, 238, 226);
+  color: #000;
+  outline: none;
+}
+
+.topbar {
+  position: relative;
+  padding: 0px 10px;
+  z-index: 10000;
+  background-color: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.topbar div {
+  position: relative;
+}
+
 .sidebar {
-  top: 0;
-  height: 100%;
+  bottom: 0;
+  height: calc(100% - 80px);
   display: flex;
   position: fixed;
-  max-width: 130px;
   padding: 30px 15px;
-  width: fit-content;
   flex-direction: column;
   background-color: #fff;
   justify-content: space-between;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 0px;
+  z-index: 2;
+  left: -100px;
 }
 .sidebar .menu {
   gap: 20px;
@@ -104,6 +146,18 @@ h6 {
   padding: 20px;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
+.scrollX {
+  overflow-x: scroll;
+}
+
+.scrollY {
+  overflow-y: scroll;
+}
+
 .search {
   border: none;
   outline: none;
@@ -132,6 +186,7 @@ tr:hover {
   padding: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 .dashboard .dashboard-card {
   display: flex;
@@ -140,12 +195,6 @@ tr:hover {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(238, 220, 200);
-}
-.dashboard .x1 {
-  grid-column: 1fr;
-}
-.dashboard .x2 {
-  grid-column: 1/span 2;
 }
 
 .graphs {
@@ -158,27 +207,38 @@ thead {
 }
 
 .modal {
+  width: fit-content;
+  height: fit-content;
   top: 0;
   left: 0;
   gap: 10px;
   z-index: 1000;
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  align-items: center;
+  align-items: end;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  opacity: 0;
+  gap: 30px;
+  border-radius: 20px;
+  opacity: 1;
   transition: all 3s;
+  background-color: #fff;
+}
+.modal .content {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  width: 1000px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  row-gap: 20px;
+  column-gap: 50px;
 }
 .modal form {
   gap: 10px;
   display: flex;
-  padding: 100px;
   position: relative;
-  border-radius: 20px;
   flex-direction: column;
-  background-color: rgb(238, 220, 200);
+  background-color: transparent;
 }
 .modal form .form-title {
   top: 15px;
@@ -190,12 +250,6 @@ thead {
 .modal form input[type=submit] {
   color: #fff;
   background-color: rgb(184, 135, 79);
-}
-
-.modal.showModal {
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .hideModal {
@@ -211,17 +265,26 @@ input {
   font-weight: 500;
   font-size: 1.5rem;
 }
-
 input::placeholder {
   color: #B8874F;
 }
-
 input[type=submit] {
   width: 100%;
   color: #B8874F;
   border-radius: 30px;
   background: #E6D4C0;
   box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
+}
+
+.img-btn {
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  outline: none;
+  border: 2px solid rgb(238, 220, 200);
 }
 
 .floating-btn {
@@ -248,6 +311,7 @@ input[type=submit] {
 }
 
 .close-modal-btn {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,20 +324,170 @@ input[type=submit] {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
+.animatedMenuIcon {
+  width: 45px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.animatedMenuIcon span {
+  display: block;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: rgb(184, 135, 79);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.animatedMenuIcon span:nth-child(1) {
+  top: 0px;
+}
+.animatedMenuIcon span:nth-child(2), .animatedMenuIcon span:nth-child(3) {
+  top: 15px;
+}
+.animatedMenuIcon span:nth-child(4) {
+  top: 30px;
+}
+.animatedMenuIcon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.animatedMenuIcon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.animatedMenuIcon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.animatedMenuIcon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.gc-span-1 {
+  grid-column: span 1;
+}
+
+.gr-span-1 {
+  grid-row: span 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-1 {
+    grid-row: span 1;
+  }
+  .gc-span-m-1 {
+    grid-column: span 1;
+  }
+}
+.gc-span-2 {
+  grid-column: span 2;
+}
+
+.gr-span-2 {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-2 {
+    grid-row: span 2;
+  }
+  .gc-span-m-2 {
+    grid-column: span 2;
+  }
+}
+.gc-span-3 {
+  grid-column: span 3;
+}
+
+.gr-span-3 {
+  grid-row: span 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-3 {
+    grid-row: span 3;
+  }
+  .gc-span-m-3 {
+    grid-column: span 3;
+  }
+}
+.gc-span-4 {
+  grid-column: span 4;
+}
+
+.gr-span-4 {
+  grid-row: span 4;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-4 {
+    grid-row: span 4;
+  }
+  .gc-span-m-4 {
+    grid-column: span 4;
+  }
+}
+.gc-span-5 {
+  grid-column: span 5;
+}
+
+.gr-span-5 {
+  grid-row: span 5;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-5 {
+    grid-row: span 5;
+  }
+  .gc-span-m-5 {
+    grid-column: span 5;
+  }
+}
+.gc-span-6 {
+  grid-column: span 6;
+}
+
+.gr-span-6 {
+  grid-row: span 6;
+}
+
+@media screen and (max-width: 1000px) {
+  .gr-span-m-6 {
+    grid-row: span 6;
+  }
+  .gc-span-m-6 {
+    grid-column: span 6;
+  }
+}
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100%;
-  height: 100%;
-  background-image: url(http://theartmad.com/wp-content/uploads/Dark-Grey-Texture-Wallpaper-5.jpg);
-  background-size: cover;
-  background-position: top center;
-  font-family: helvetica neue, helvetica, arial, sans-serif;
-  font-weight: 200;
-}
 html.modal-active,
 body.modal-active {
   overflow: hidden;
@@ -281,13 +495,15 @@ body.modal-active {
 
 #modal-container {
   position: fixed;
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   transform: scale(0);
-  z-index: 1;
+  z-index: 10000;
 }
 #modal-container.one {
   transform: scaleY(0.01) scaleX(0);
@@ -309,26 +525,26 @@ body.modal-active {
 }
 #modal-container.two .modal-background {
   background: rgba(0, 0, 0, 0);
-  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two .modal-background .modal {
   opacity: 0;
-  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleUp 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two + .content {
-  animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleBack 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out {
-  animation: quickScaleDown 0s 0.5s linear forwards;
+  animation: quickScaleDown 0s 1s linear forwards;
 }
 #modal-container.two.out .modal-background {
-  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: fadeOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out .modal-background .modal {
-  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleDown 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.two.out + .content {
-  animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: scaleForward 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container.three {
   z-index: 0;
@@ -464,16 +680,17 @@ body.modal-active {
   animation: modalContentFadeOut 0.5s 0.5 cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 #modal-container .modal-background {
-  display: table-cell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   background: rgba(0, 0, 0, 0.8);
   text-align: center;
   vertical-align: middle;
 }
 #modal-container .modal-background .modal {
-  background: white;
-  padding: 50px;
-  display: inline-block;
-  border-radius: 3px;
+  display: flex;
   font-weight: 300;
   position: relative;
 }
@@ -504,7 +721,6 @@ body.modal-active {
 .content {
   min-height: 100%;
   height: 100%;
-  background: white;
   position: relative;
   z-index: 0;
 }
@@ -843,8 +1059,10 @@ button {
   box-sizing: border-box;
 }
 
-section {
-  margin-left: 150px;
+@media screen and (max-width: 786px) {
+  section {
+    margin-left: 0px;
+  }
 }
 
 #loginBody {
@@ -927,23 +1145,23 @@ section {
   box-shadow: 1px 3px 30px rgba(0, 0, 0, 0.3);
 }
 
-#loanHistory {
+.detailsTab {
   gap: 20px;
   display: grid;
   padding: 10px;
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  height: calc(100vh - 80px);
 }
-#loanHistory .filters {
+.detailsTab .filters {
   gap: 20px;
   display: flex;
   justify-content: space-between;
 }
-#loanHistory .filters .filter-btns {
+.detailsTab .filters .filter-btns {
   font-size: 0;
 }
-#loanHistory .filters button {
+.detailsTab .filters button {
   height: 100%;
   margin: 0;
   border-radius: 0;
@@ -951,41 +1169,48 @@ section {
   border: none;
   font-size: 1.2rem;
 }
-#loanHistory .filters .selected {
+.detailsTab .filters .selected {
   background-color: rgb(238, 220, 200);
 }
-#loanHistory .tiles {
+.detailsTab .tiles {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 15px 0;
 }
-#loanHistory .details .list {
+.detailsTab .details .list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-#loanHistory .table {
+.detailsTab .table {
   display: block;
 }
-#loanHistory .history {
+.detailsTab .history {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  #loanHistory .history {
+  .detailsTab .history {
     display: block;
   }
-  #loanHistory .table {
+  .detailsTab .table {
     display: none;
   }
 }
 
-#loanHistory > div {
+.detailsTab > div {
   padding: 15px;
   overflow-y: scroll;
   border-radius: 20px;
   box-sizing: border-box;
   scroll-behavior: smooth;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.detailsTab > div .title {
+  text-align: center;
+}
+
+.detail-tile h6 {
+  color: #808080;
 }
 
 /*# sourceMappingURL=style.css.map */

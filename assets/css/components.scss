@@ -1,15 +1,42 @@
+$mobile: 786px;
+
 // sidebar
+
+.topbar {
+    position: relative;
+    // margin-left: 100px;
+    // // width: calc(100%);
+    padding: 0px 10px;
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, .2);
+    // width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    div {
+        position: relative;
+    }
+}
+
 .sidebar {
-    top: 0;
-    height: 100%;
+    // box-sizing: border-box;
+    bottom: 0;
+    height: calc(100% - 80px);
     display: flex;
     position: fixed;
-    max-width: 130px;
     padding: 30px 15px;
-    width: fit-content;
+    // width: 100px;
     flex-direction: column;
     background-color: #fff;
     justify-content: space-between;
+    overflow-x: hidden;
+    transition: 0.5s;
+    width: 0px;
+    z-index: 2;
+    left: -100px;
 
     .menu {
         gap: 20px;
@@ -35,6 +62,7 @@
         img:hover {
             background-color: $primary;
             box-shadow: 1px 1px 10px rgba($darkPrimary, .3);
+
         }
 
         .profile {
@@ -44,7 +72,9 @@
     }
 
 
+
 }
+
 
 .tile {
     display: flex;
@@ -57,6 +87,21 @@
 
 .detailTile {
     padding: 20px;
+}
+
+//overflow
+.noScroll {
+    overflow: hidden;
+
+}
+
+.scrollX {
+    overflow-x: scroll;
+}
+
+.scrollY {
+    overflow-y: scroll;
+
 }
 
 .search {
@@ -97,6 +142,7 @@ tr:hover {
     padding: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    height: 100%;
 
     //cards inside dashboard
     .dashboard-card {
@@ -107,14 +153,6 @@ tr:hover {
         justify-content: center;
         background-color: $primary;
 
-    }
-
-    .x1 {
-        grid-column: 1fr;
-    }
-
-    .x2 {
-        grid-column: 1/span 2;
     }
 }
 
@@ -129,31 +167,47 @@ thead {
 }
 
 .modal {
+    width: fit-content;
+    height: fit-content;
     top: 0;
     left: 0;
     gap: 10px;
     z-index: 1000;
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    gap: 30px;
     // backdrop-filter: blur(5px);
-    background-color: rgba(#000, .5);
+
     // height: 100vh;
-    width: 100%;
-    opacity: 0;
+    // padding: 100px;
+    border-radius: 20px;
+    opacity: 1;
     transition: all 3s;
+    background-color: #fff;
 
 
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        width: 1000px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        // background-color: #fff;
+        row-gap: 20px;
+        column-gap: 50px;
+    }
 
     form {
         gap: 10px;
         display: flex;
-        padding: 100px;
+
         position: relative;
-        border-radius: 20px;
+
         flex-direction: column;
-        background-color: $primary;
+        background-color: transparent;
 
         .form-title {
             top: 15px;
@@ -170,12 +224,7 @@ thead {
     }
 }
 
-.modal.showModal {
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
 
-}
 
 .hideModal {
     display: none;
@@ -188,27 +237,43 @@ input {
     outline: none;
     border-radius: 20px;
 
-
     font: {
         weight: 500;
         size: 1.5rem;
     }
+
+    &::placeholder {
+        color: #B8874F;
+    }
+
+    &[type='submit'] {
+        width: 100%;
+        color: #B8874F;
+        border-radius: 30px;
+        background: #E6D4C0;
+        box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
+
+    }
 }
 
-input::placeholder {
-    color: #B8874F;
-}
 
-input[type='submit'] {
-    width: 100%;
-    color: #B8874F;
-    border-radius: 30px;
-    background: #E6D4C0;
-    box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
 
-}
+
 
 //buttons
+.img-btn {
+    height: 50px;
+    // width: 75px;
+    aspect-ratio: 1;
+    border-radius: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: none;
+    border: 2px solid $primary;
+
+}
+
 .floating-btn {
     width: 75px;
     z-index: 100;
@@ -233,6 +298,7 @@ input[type='submit'] {
 }
 
 .close-modal-btn {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,3 +311,121 @@ input[type='submit'] {
     color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .4);
 }
+
+.animatedMenuIcon {
+    // top: -10px;
+    width: 45px;
+    height: 40px;
+    position: relative;
+    // margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+
+    span {
+        display: block;
+        position: absolute;
+        height: 10px;
+        width: 100%;
+        background: $darkPrimary;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 15px;
+        }
+
+        &:nth-child(4) {
+            top: 30px;
+        }
+    }
+
+    &.open {
+        span {
+            &:nth-child(1) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+
+            &:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            &:nth-child(4) {
+                top: 18px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+}
+
+
+
+
+
+// GRID STYLES
+$grid-spans: 1, 2, 3, 4, 5, 6;
+
+@each $span in $grid-spans {
+    .gc-span-#{$span} {
+        grid-column: span $span;
+    }
+
+    .gr-span-#{$span} {
+        grid-row: span $span;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .gr-span-m-#{$span} {
+            grid-row: span $span;
+        }
+
+        .gc-span-m-#{$span} {
+            grid-column: span $span;
+        }
+    }
+}
+
+// .span1 {
+//     grid-column: span 1;
+// }
+
+// .span2 {
+//     grid-column: span 1;
+// }
+
+// .span3 {
+//     grid-column: span 1;
+// }
