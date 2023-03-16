@@ -1,3 +1,7 @@
+//New page
+
+
+
 
 //page change
 function goto($link) {
@@ -31,16 +35,28 @@ $('.close-modal-btn').click(function () {
 
 //icon animation
 $(document).ready(function () {
+    if (window.matchMedia('(max-width: 1000px)').matches) {
+        $(".sidebar").addClass('close');
+    } else {
+        $(".sidebar").addClass('open');
+
+        //...
+    }
     $('.animatedMenuIcon').click(function () {
         $(this).toggleClass('open');
         console.log($(".sidebar"))
         if ($(this).hasClass('open')) {
-            $(".sidebar")[0].style.width = "100px";
-            $(".sidebar")[0].style.left = "0";
+            $(".sidebar").removeClass('close').addClass('open');
+
         } else {
-            $(".sidebar")[0].style.width = "0px";
-            $(".sidebar")[0].style.left = "-100px";
+            $(".sidebar").removeClass('open').addClass('close');
+
         }
 
     });
 });
+//toggling open close user menu
+function userMenuToggle() {
+    const toggleMenu = document.querySelector(".user-menu");
+    toggleMenu.classList.toggle("active");
+}

@@ -6,25 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./assets/css/style.css">
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
-        defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
-        defer></script>
-    <script src="https://kit.fontawesome.com/84cd854e91.js" defer crossorigin="anonymous" defer></script>
 
+
+    <script src="https://kit.fontawesome.com/84cd854e91.js" defer crossorigin="anonymous" defer></script>
     <script src="./assets/js/main.js" defer></script>
-    <title>Home</title>
+
+    <title>Loans</title>
 
 
 </head>
@@ -48,9 +43,7 @@
             <h4>Loans</h4>
         </div> -->
         <div class="end">
-            <a onclick="userMenuToggle()">
-                <span style="color:white;" class="fw-b">Requester</span> <i class="fas fa-user"></i>
-            </a>
+            <i class="fas fa-user" onclick="userMenuToggle()"></i>
             <div class="user-menu">
                 <h6>Khaula Rashid<br /><span>Requester</span></h6>
                 <ul>
@@ -76,17 +69,18 @@
     </div>
     <nav class="sidebar">
         <div class="menu">
-            <div class="sections" onclick="goto('loans')">
+
+            <div class="sections" onclick="goto('approver-loans')">
                 <img class="transparent-right" src="./assets/img/section-loan.png" alt="">
-                <h6>My Loan</h6>
-            </div>
-            <div class="sections" onclick="goto('company')">
-                <img class="transparent-right" src="./assets/img/section-company.png" alt="">
-                <h6>My Company</h6>
+                <h6>Loans</h6>
             </div>
             <div class="sections">
                 <img class="transparent-right" src="./assets/img/section-property.png" alt="">
-                <h6>My Property</h6>
+                <h6>Properties</h6>
+            </div>
+            <div class="sections" onclick="goto('approver-company')">
+                <img class="transparent-right" src="./assets/img/section-company.png" alt="">
+                <h6>Companies</h6>
             </div>
         </div>
 
@@ -97,11 +91,12 @@
             </button>
         </div>
     </nav>
+
+    <!-- MAIN -->
     <section class="main">
-        <h3 class="page-title">Dashboard</h3>
-        <div class="dashboard-poster" onclick="goto('loans')">
+        <div class="dashboard-poster" onclick="goto('approver-loans')">
             <img class="transparent-right" src="./assets/img/section-loan.png" alt="" srcset="">
-            <h3 class="fw-b">My Loans</h3>
+            <h3 class="fw-b">Loan Requests</h3>
             <div class="home-dash-items">
                 <div class="dashboard gc-span-1">
                     <div class="dashboard-card gc-span-1">
@@ -123,9 +118,9 @@
                 </div>
             </div>
         </div>
-        <div class="dashboard-poster" onclick="goto('loans')">
+        <div class="dashboard-poster" onclick="goto('approver-loans')">
             <img class="transparent-right" src="./assets/img/section-company.png" alt="" srcset="">
-            <h3 class="fw-b">My Properties</h3>
+            <h3 class="fw-b">Properties</h3>
             <div class="home-dash-items">
                 <div class="dashboard gc-span-1">
                     <div class="dashboard-card gc-span-1">
@@ -147,9 +142,9 @@
                 </div>
             </div>
         </div>
-        <div class="dashboard-poster" onclick="goto('loans')">
+        <div class="dashboard-poster" onclick="goto('approver-loans')">
             <img class="transparent-right" src="./assets/img/section-property.png" alt="" srcset="">
-            <h3 class="fw-b">My Company</h3>
+            <h3 class="fw-b">Company</h3>
             <div class="home-dash-items">
                 <div class="dashboard gc-span-1">
                     <div class="dashboard-card gc-span-1">
@@ -173,6 +168,21 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+    <script> function userMenuToggle() {
+            const toggleMenu = document.querySelector(".user-menu");
+            toggleMenu.classList.toggle("active");
+        }</script>
 </body>
 
 </html>

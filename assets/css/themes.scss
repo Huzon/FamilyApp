@@ -6,6 +6,7 @@ $lightPrimary: rgb(248, 238, 226);
 $veryLightPrimary: rgb(255, 250, 244);
 $errorBG: #FFE1DD;
 $successBG: #E3FFDA;
+$lightText: #cecece;
 
 body {
     background: $veryLightPrimary;
@@ -87,4 +88,9 @@ h6 {
     font: {
         weight: 600;
     }
+}
+
+.page-title {
+    text-align: center;
+    margin: 10px;
 }

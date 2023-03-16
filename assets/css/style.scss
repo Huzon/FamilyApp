@@ -11,9 +11,13 @@ button {
     box-sizing: border-box;
 }
 
-section {
-    @media screen and (max-width: $mobile) {
-        margin-left: 0px;
+
+
+.main {
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 100px;
+
     }
 }
 
@@ -32,7 +36,7 @@ section {
 #login {
     gap: 30px;
     display: flex;
-    padding: 200px;
+    padding: 100px;
     border-radius: 15px;
     align-items: center;
     height: fit-content;
@@ -78,6 +82,7 @@ section {
 
 //------------------------------------
 //HOME
+
 .dashboard-poster {
     // background: linear-gradient(90deg, rgba(#ffffff, .5) 10%, rgba($primary, .3) 97.17%);
     margin: 30px;
@@ -89,27 +94,80 @@ section {
     box-sizing: border-box;
     background-color: transparent;
     box-shadow: 1px 3px 30px rgba(#000, .2);
+    overflow: hidden;
+
+    @media screen and (max-width: $tablet) {
+        padding: 10px;
+        height: fit-content;
+
+        &>h3 {
+            margin-bottom: 10px;
+        }
+
+    }
+
 
     img.transparent-right {
 
         height: 275px;
+        max-height: 50%;
         aspect-ratio: 1;
         object-fit: contain;
         opacity: .2;
         position: absolute;
         right: 10px;
         top: 10px;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    .home-dash-items {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        height: 100%;
+
+        @media screen and (max-width: $tablet) {
+            height: 250px;
+        }
     }
 
     .dashboard {
         width: 500px;
         // height: 100%;
         padding: 20px 0;
+        gap: 20px;
+        // padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        box-sizing: border-box;
+
+        @media screen and (max-width: $tablet) {
+            overflow: hidden;
+            padding: 0px;
+            width: 100%;
+
+        }
+
+        h4 {
+            font: {
+                size: 1rem;
+            }
+        }
+
     }
 
     .graphs {
         // padding: 0;
         box-sizing: border-box;
+        display: block;
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
 
     }
 }
@@ -123,6 +181,7 @@ section {
 }
 
 
+
 // -----------------------------------
 // Loans
 .detailsTab {
@@ -133,6 +192,15 @@ section {
     grid-template-columns: 1fr 1fr;
 
     height: calc(100vh - 80px);
+
+    @media screen and (max-width: $tablet) {
+
+        width: 100%;
+        height: auto;
+        grid-template-rows: 1fr 1fr 2fr;
+
+
+    }
 
     .filters {
         gap: 20px;
@@ -207,7 +275,7 @@ section {
 
 .detailsTab>div {
     padding: 15px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     border-radius: 20px;
     box-sizing: border-box;
     scroll-behavior: smooth;
