@@ -60,3 +60,8 @@ function userMenuToggle() {
     const toggleMenu = document.querySelector(".user-menu");
     toggleMenu.classList.toggle("active");
 }
+
+function userRoleToggle() {
+    const toggleMenu = document.querySelector(".role-menu");
+    toggleMenu.classList.toggle("active");
+}
