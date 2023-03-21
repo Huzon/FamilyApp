@@ -498,6 +498,10 @@ thead {
   }
 }
 
+#loan-edit-modal {
+  z-index: 1000000;
+}
+
 .hideModal {
   display: none;
 }
@@ -520,6 +524,9 @@ input[type=submit] {
   border-radius: 30px;
   background: #E6D4C0;
   box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
+}
+input.border-dark {
+  border: 3px solid rgb(184, 135, 79);
 }
 
 .img-btn {

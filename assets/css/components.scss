@@ -613,6 +613,9 @@ thead {
     }
 }
 
+#loan-edit-modal {
+    z-index: 1000000;
+}
 
 
 .hideModal {
@@ -643,7 +646,13 @@ input {
         box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
 
     }
+
+    &.border-dark {
+        border: 3px solid $darkPrimary;
+    }
 }
+
+
 
 
 
