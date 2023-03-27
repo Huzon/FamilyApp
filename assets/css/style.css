@@ -288,6 +288,33 @@ h6 {
   border-bottom: none;
 }
 
+.tab-content {
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tab-item {
+  overflow-y: scroll;
+  transition: all 2s;
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  opacity: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+}
+.tab-item.hide {
+  transition: all 1s;
+  opacity: 0;
+}
+
 .tile {
   display: flex;
   border-radius: 5px;
@@ -425,6 +452,14 @@ thead {
   max-height: 800px;
   overflow: scroll;
 }
+.modal-footer {
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.modal-footer .btn-group {
+  display: flex;
+  gap: 5px;
+}
 .modal .loan-details-content {
   padding: 20px;
   border-radius: 20px;
@@ -491,6 +526,16 @@ thead {
 .modal .loan-details-content th {
     font-size: 1rem;
   }
+  .modal-footer {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .modal-footer .btn-group {
+    width: 100%;
+  }
+  .modal-footer .btn-group button {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 786px) {
   .modal {
@@ -504,6 +549,23 @@ thead {
 
 .hideModal {
   display: none;
+}
+
+.partnerCard {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 350px;
+  text-align: center;
+  border-radius: 20px;
+}
+.partnerCard img {
+  width: 100%;
+}
+.partnerCard div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 10px;
 }
 
 input {
@@ -526,7 +588,16 @@ input[type=submit] {
   box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
 }
 input.border-dark {
-  border: 3px solid rgb(184, 135, 79);
+  border: 3px solid rgb(184, 135, 79) !important;
+}
+input.small {
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px 5px;
+}
+
+.width100 {
+  width: 100%;
 }
 
 .img-btn {
@@ -655,6 +726,47 @@ input.border-dark {
   .animatedMenuIcon {
     display: block;
   }
+}
+
+.tab-btn {
+  width: 150px;
+  background-color: rgb(184, 135, 79);
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  font-size: 1rem;
+}
+.tab-btn:first-child {
+  border-top-left-radius: 15px;
+}
+.tab-btn:last-child {
+  border-top-right-radius: 15px;
+}
+.tab-btn:hover {
+  box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(184, 135, 79, 0.8);
+  font-size: 1.1rem;
+}
+.tab-btn:focus {
+  box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(184, 135, 79, 0.6);
+  font-size: 1.1rem;
+}
+
+.download-btn {
+  background-color: rgb(238, 220, 200);
+  border-radius: 5px;
+  width: 100%;
+}
+.download-btn:hover {
+  background-color: rgb(184, 135, 79);
+}
+.grid2x {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gc-span-1 {
@@ -1328,6 +1440,18 @@ button {
   box-sizing: border-box;
 }
 
+ul {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.main {
+  margin-top: 100px;
+}
 @media screen and (min-width: 1000px) {
   .main {
     margin-left: 100px;
@@ -1532,6 +1656,34 @@ button {
 }
 .detailsTab > div .title {
   text-align: center;
+}
+
+.companyDetails {
+  margin: 15px;
+  padding: 10px;
+  height: calc(100vh - 80px);
+}
+@media screen and (max-width: 1000px) {
+  .companyDetails {
+    width: 100%;
+    height: auto;
+    grid-template-rows: 1fr 1fr 2fr;
+  }
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detail-tile h6 {

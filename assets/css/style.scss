@@ -11,9 +11,18 @@ button {
     box-sizing: border-box;
 }
 
+ul {
+    margin: 0;
+}
+
+button {
+    outline: none;
+    border: none;
+}
 
 
 .main {
+    margin-top: 100px;
 
     @media screen and (min-width: $tablet) {
         margin-left: 100px;
@@ -289,6 +298,39 @@ button {
         text-align: center;
 
     }
+}
+
+//ComanyDetails Page
+.companyDetails {
+
+    margin: 15px;
+    padding: 10px;
+
+    height: calc(100vh - 80px);
+
+    @media screen and (max-width: $tablet) {
+
+        width: 100%;
+        height: auto;
+        grid-template-rows: 1fr 1fr 2fr;
+
+
+    }
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 //Loan Details

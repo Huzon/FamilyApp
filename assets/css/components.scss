@@ -326,6 +326,47 @@ $tablet: 1000px;
 
 }
 
+// TABS
+.tab-content {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    // background-color: #555;
+    box-shadow: 2px 2px 20px rgba(#000, .1);
+
+
+}
+
+.tab-item {
+    // display: block;
+    overflow-y: scroll;
+    transition: all 2s;
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    opacity: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    // padding: 10px;
+
+    &.hide {
+        transition: all 1s;
+        opacity: 0;
+        // left: -100%;
+        // transform: none;
+        // display: none;
+
+    }
+}
+
+
+
+// _______________________________________________
 
 .tile {
     display: flex;
@@ -515,6 +556,17 @@ thead {
         overflow: scroll;
     }
 
+    &-footer {
+        flex-wrap: nowrap;
+        gap: 20px;
+
+        .btn-group {
+            display: flex;
+            gap: 5px;
+        }
+
+    }
+
     .loan-details-content {
         padding: 20px;
         border-radius: 20px;
@@ -606,6 +658,20 @@ thead {
                 }
             }
         }
+
+        &-footer {
+            flex-direction: column;
+            gap: 5px;
+
+            .btn-group {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+        }
     }
 
     @media screen and (max-width:$mobile) {
@@ -620,6 +686,28 @@ thead {
 
 .hideModal {
     display: none;
+}
+
+.partnerCard {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    padding: 10px;
+    width: 350px;
+    text-align: center;
+    border-radius: 20px;
+
+    img {
+        width: 100%;
+        // aspect-ratio: 1;
+
+    }
+
+    div {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
 }
 
 input {
@@ -648,11 +736,24 @@ input {
     }
 
     &.border-dark {
-        border: 3px solid $darkPrimary;
+        border: 3px solid $darkPrimary !important;
     }
+
+    &.small {
+        font: {
+            size: 1rem;
+
+        }
+
+        border-radius: 10px;
+        padding: 10px 5px;
+    }
+
 }
 
-
+.width100 {
+    width: 100%;
+}
 
 
 
@@ -811,11 +912,80 @@ input {
     }
 }
 
+.tab-btn {
+    width: 150px;
+    background-color: $darkPrimary;
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    outline: none;
+    border: none;
+    transition: .5s;
 
+    font: {
+        size: 1rem;
+    }
 
+    &:first-child {
+
+        border-top-left-radius: 15px;
+
+    }
+
+    &:last-child {
+
+        border-top-right-radius: 15px;
+
+    }
+
+    &:hover {
+        box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: rgba($darkPrimary, .8);
+
+        font: {
+            size: 1.1rem;
+        }
+    }
+
+    // &:active {
+    //     box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(0, 0, 0, 0.1);
+    //     background-color: rgba($darkPrimary, .6);
+
+    //     font: {
+    //         size: 1.1rem;
+    //     }
+    // }
+
+    &:focus {
+        box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.1), 4px 4px 20px rgba(0, 0, 0, 0.1);
+        background-color: rgba($darkPrimary, .6);
+
+        font: {
+            size: 1.1rem;
+        }
+    }
+}
+
+.download-btn {
+    background-color: $primary;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+        background-color: $darkPrimary;
+    }
+
+    i {}
+}
 
 
 // GRID STYLES
+
+.grid2x {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 $grid-spans: 1, 2, 3, 4, 5, 6;
 
 @each $span in $grid-spans {
