@@ -8,6 +8,35 @@ $errorBG: #FFE1DD;
 $successBG: #E3FFDA;
 $lightText: #cecece;
 
+.primary {
+    &-bg {
+        background-color: $primary;
+        color: #000000;
+    }
+
+    color:$primary;
+}
+
+.dark-primary {
+    &-bg {
+        color: #fff;
+        background-color: $darkPrimary;
+    }
+
+    color:$darkPrimary;
+
+}
+
+.light-Primary {
+    &-bg {
+        color: #000000;
+        background-color: $lightPrimary;
+    }
+
+    color:$lightPrimary;
+
+}
+
 body {
     background: $veryLightPrimary;
     margin: 0;

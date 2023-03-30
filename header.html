@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://kit.fontawesome.com/84cd854e91.js" defer crossorigin="anonymous" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+
+    <title>Loans</title>
+
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="topbar">
+        <div class="start">
+            <button class="img-btn" onclick="goto('home')" style="background-image:url('./assets/img/Logo.png')">
+            </button>
+            <div>
+                <div class="animatedMenuIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="title">
+            <h4>Loans</h4>
+        </div> -->
+        <div class="end">
+            <i class="fas fa-user" onclick="userMenuToggle()"></i>
+            <div class="user-menu">
+                <h6>Khaula Rashid<br /><span>Requester</span></h6>
+                <ul>
+                    <li>
+                        <i class="fas fa-user-alt"></i> <a href="#">My profile</a>
+                    </li>
+                    <!-- <li>
+                        <img src="./assets/icons/edit.png" /><a href="#">Edit profile</a>
+                    </li>
+                    <li>
+                        <img src="./assets/icons/envelope.png" /><a href="#">Inbox</a>
+                    </li> -->
+                    <li>
+                        <i class="fas fa-cog"></i><a href="#">Setting</a>
+                    </li>
+                    <!-- <li><img src="./assets/icons/question.png" /><a href="#">Help</a></li> -->
+                    <li>
+                        <i class="fas fa-power-off"></i><a href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="sidebar">
+        <div class="menu">
+
+            <div class="sections" onclick="goto('loans')">
+                <img class="transparent-right" src="./assets/img/section-loan.png" alt="">
+                <h6>Loan</h6>
+            </div>
+            <div class="sections" onclick="goto('company')">
+                <img class="transparent-right" src="./assets/img/section-company.png" alt="">
+                <h6>Company</h6>
+            </div>
+            <div class="sections">
+                <img class="transparent-right" src="./assets/img/section-property.png" alt="">
+                <h6>Property</h6>
+            </div>
+        </div>
+
+        <div class="profile">
+            <h6 class="fw-l">Mrs. Khaula Rashid </h6>
+        </div>
+    </nav>
+
+
+    <!-- BODY -->
+
+
+
+    <!-- FOOTER -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

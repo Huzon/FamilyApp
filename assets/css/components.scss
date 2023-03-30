@@ -139,7 +139,6 @@ $tablet: 1000px;
 
 .sidebar {
     // box-sizing: border-box;
-
     bottom: 0;
     height: calc(100% - 80px);
     display: flex;
@@ -152,7 +151,7 @@ $tablet: 1000px;
     transition: 0.5s;
     z-index: 1000;
     // left: 0px;
-    // width: 100px;
+    width: 100px;
 
     // @media screen and (max-width: $tablet) {
     //     width: 0px;
@@ -324,6 +323,22 @@ $tablet: 1000px;
 
 
 
+}
+
+.footer {
+
+
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 20px 20px 120px;
+    // left: 100px
+    width: 100%;
+
+    @media screen and (max-width: $tablet) {
+        padding: 20px;
+        // padding-left: none;
+    }
 }
 
 // TABS
@@ -512,203 +527,8 @@ thead {
     background-color: $primary;
 }
 
-.modal {
-    overflow: hidden;
-    width: fit-content;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    opacity: 1;
-    transition: all 3s;
-
-    &-content {
-        border-radius: 30px;
-        background-color: #fff;
-    }
-
-    &-header {
-        // border {
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
-
-        // }
 
 
-        justify-content: center;
-        background-color: $primary;
-        color: $darkPrimary;
-
-        font: {
-            size: 2rem;
-            weight: 500;
-
-
-        }
-
-        // text-align: center;
-    }
-
-    &-body {
-        max-height: 800px;
-        overflow: scroll;
-    }
-
-    &-footer {
-        flex-wrap: nowrap;
-        gap: 20px;
-
-        .btn-group {
-            display: flex;
-            gap: 5px;
-        }
-
-    }
-
-    .loan-details-content {
-        padding: 20px;
-        border-radius: 20px;
-        background-color: #fff;
-        grid-template-columns: repeat(2, 1fr);
-        display: grid;
-        width: 1000px;
-        max-height: 80vh;
-        overflow-y: scroll;
-        // background-color: #fff;
-        row-gap: 20px;
-        column-gap: 50px;
-    }
-
-    form {
-        // padding: 20px;
-        border-radius: 20px;
-        background-color: #fff;
-        gap: 10px;
-        display: flex;
-        padding: 50px 150px;
-        position: relative;
-        max-height: 80vh;
-        flex-direction: column;
-
-        .form-title {
-            // top: 15px;
-            // left: 50%;
-            // position: absolute;
-            text-align: center;
-            margin-bottom: 20px;
-
-        }
-
-        input {
-            background-color: $veryLightPrimary;
-            border: 2px solid $primary;
-            color: $darkPrimary;
-
-            &::placeholder {
-                color: #beb9b9;
-            }
-
-        }
-
-        input[type=submit] {
-            color: #fff;
-            background-color: $darkPrimary;
-
-        }
-    }
-
-    @media screen and (max-width: $tablet) {
-        width: 100%;
-        max-width: 600px;
-
-        form {
-            padding: 0;
-
-            input,
-            textarea {
-                padding: 10px;
-                width: 100%;
-
-                font: {
-                    size: 1.2rem;
-                }
-            }
-
-        }
-
-        .loan-details-content {
-            padding: 0;
-            border-radius: 0;
-            max-height: 500px;
-            width: 100%;
-            gap: 10px;
-
-            h5 {
-                font: {
-                    size: 1rem;
-                }
-            }
-
-            td,
-            th {
-                font: {
-                    size: 1rem;
-                }
-            }
-        }
-
-        &-footer {
-            flex-direction: column;
-            gap: 5px;
-
-            .btn-group {
-                width: 100%;
-
-                button {
-                    width: 100%;
-                }
-            }
-
-        }
-    }
-
-    @media screen and (max-width:$mobile) {
-        max-width: 80%;
-    }
-}
-
-#loan-edit-modal {
-    z-index: 1000000;
-}
-
-
-.hideModal {
-    display: none;
-}
-
-.partnerCard {
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-    padding: 10px;
-    width: 350px;
-    text-align: center;
-    border-radius: 20px;
-
-    img {
-        width: 100%;
-        // aspect-ratio: 1;
-
-    }
-
-    div {
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px;
-        column-gap: 10px;
-    }
-}
 
 input {
     width: 300px;
@@ -760,6 +580,35 @@ input {
 
 
 //buttons
+.btn {
+    &-primary {
+        @extend .primary-bg;
+    }
+
+    &-darkPrimary {
+        @extend .dark-primary-bg;
+    }
+
+    &-large {
+        padding: 20px;
+        border-radius: 15px;
+
+        font: {
+            size: 1.5rem;
+        }
+    }
+
+    &-small {
+        padding: 10px;
+        border-radius: 15px;
+
+        font: {
+            size: 1rem;
+        }
+    }
+
+}
+
 .img-btn {
     height: 60px;
     // width: 75px;
@@ -977,6 +826,22 @@ input {
 
     i {}
 }
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+    width: 300px;
+
+    button {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+
+    }
+}
+
 
 
 // GRID STYLES

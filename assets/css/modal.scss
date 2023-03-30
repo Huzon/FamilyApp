@@ -13,40 +13,19 @@ body {
 
 .modal-container {
     position: fixed;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     transform: scale(0);
     z-index: 10000;
+    overflow-y: auto;
+    overflow-x: hidden;
 
-    &.one {
-        transform: scaleY(.01) scaleX(0);
-        animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-        .modal-background {
-            .modal {
-                transform: scale(0);
-                animation: zoomIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-
-        &.out {
-            transform: scale(1);
-            animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-            .modal-background {
-                .modal {
-                    animation: zoomOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                }
-            }
-        }
-    }
-
-    &.modal-animation-two {
+    &.modal-animation {
         transform: scale(1);
 
         .modal-background {
@@ -80,187 +59,6 @@ body {
         }
     }
 
-    &.three {
-        z-index: 0;
-        transform: scale(1);
-
-        .modal-background {
-            background: rgba(0, 0, 0, .6);
-
-            .modal {
-                animation: moveUp .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-
-        +.content {
-            z-index: 1;
-            animation: slideUpLarge .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        }
-
-        &.out {
-            .modal-background {
-                .modal {
-                    animation: moveDown .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                }
-            }
-
-            +.content {
-                animation: slideDownLarge .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-    }
-
-    &.four {
-        z-index: 0;
-        transform: scale(1);
-
-        .modal-background {
-            background: rgba(0, 0, 0, .7);
-
-            .modal {
-                animation: blowUpModal .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-
-        +.content {
-            z-index: 1;
-            animation: blowUpContent .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-        }
-
-        &.out {
-            .modal-background {
-                .modal {
-                    animation: blowUpModalTwo .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                }
-            }
-
-            +.content {
-                animation: blowUpContentTwo .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-    }
-
-    &.five {
-        transform: scale(1);
-
-        .modal-background {
-            background: rgba(0, 0, 0, .0);
-            animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-            .modal {
-                transform: translateX(-1500px);
-                animation: roadRunnerIn .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-            }
-        }
-
-        &.out {
-            animation: quickScaleDown 0s .5s linear forwards;
-
-            .modal-background {
-                animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                .modal {
-                    animation: roadRunnerOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                }
-            }
-        }
-    }
-
-    &.six {
-        transform: scale(1);
-
-        .modal-background {
-            background: rgba(0, 0, 0, .0);
-            animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-            .modal {
-                background-color: transparent;
-                animation: modalFadeIn .5s .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                h2,
-                p {
-                    opacity: 0;
-                    position: relative;
-                    animation: modalContentFadeIn .5s 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                }
-
-                .modal-svg {
-                    rect {
-                        animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                    }
-                }
-            }
-        }
-
-        &.out {
-            animation: quickScaleDown 0s .5s linear forwards;
-
-            .modal-background {
-                animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                .modal {
-                    animation: modalFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                    h2,
-                    p {
-                        animation: modalContentFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                    }
-
-                    .modal-svg {
-                        rect {
-                            animation: sketchOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.seven {
-        transform: scale(1);
-
-        .modal-background {
-            background: rgba(0, 0, 0, .0);
-            animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-            .modal {
-                height: 75px;
-                width: 75px;
-                border-radius: 75px;
-                overflow: hidden;
-                animation: bondJamesBond 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                h2,
-                p {
-                    opacity: 0;
-                    position: relative;
-                    animation: modalContentFadeIn .5s 1.4s linear forwards;
-                }
-            }
-        }
-
-        &.out {
-            animation: slowFade .5s 1.5s linear forwards;
-
-            .modal-background {
-                background-color: rgba(0, 0, 0, .7);
-                animation: fadeToRed 2s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                .modal {
-                    border-radius: 3px;
-                    height: 162px;
-                    width: 227px;
-                    animation: killShot 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-
-                    h2,
-                    p {
-                        animation: modalContentFadeOut .5s .5 cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
-                    }
-                }
-            }
-        }
-    }
-
     .modal-background {
         display: flex;
         align-items: center;
@@ -270,43 +68,157 @@ body {
         background: rgba(0, 0, 0, .8);
         text-align: center;
         vertical-align: middle;
+    }
+}
 
-        .modal {
+.modal {
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 1;
+    transition: all 3s;
 
-            // padding: 50px;
-            display: flex;
-            // border-radius: 3px;
-            font-weight: 300;
-            position: relative;
+    &-content {
+        border-radius: 30px;
+        background-color: #fff;
+    }
 
-            h2 {
-                font-size: 25px;
-                line-height: 25px;
-                margin-bottom: 15px;
+    &-header {
+        // border {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+
+        // }
+
+
+        justify-content: center;
+        background-color: $primary;
+        color: $darkPrimary;
+
+        font: {
+            size: 2rem;
+            weight: 500;
+
+
+        }
+
+        // text-align: center;
+    }
+
+    &-body {
+        max-height: 800px;
+        overflow: scroll;
+    }
+
+    &-footer {
+        flex-wrap: nowrap;
+        gap: 20px;
+
+
+    }
+
+
+
+    form {
+        // padding: 20px;
+        border-radius: 20px;
+        background-color: #fff;
+        gap: 10px;
+        display: flex;
+        padding: 50px 150px;
+        position: relative;
+        max-height: 80vh;
+        flex-direction: column;
+
+        .form-title {
+            // top: 15px;
+            // left: 50%;
+            // position: absolute;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        input {
+            background-color: $veryLightPrimary;
+            border: 2px solid $primary;
+            color: $darkPrimary;
+
+            &::placeholder {
+                color: #beb9b9;
             }
 
-            p {
-                font-size: 18px;
-                line-height: 22px;
-            }
+        }
 
-            .modal-svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                border-radius: 3px;
+        input[type=submit] {
+            color: #fff;
+            background-color: $darkPrimary;
 
-                rect {
-                    stroke: #fff;
-                    stroke-width: 2px;
-                    stroke-dasharray: 778;
-                    stroke-dashoffset: 778;
-                }
-            }
         }
     }
+
+    .loan-details-content {
+        width: 1000px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        max-width: 600px;
+
+        form {
+            padding: 0;
+
+            input,
+            textarea {
+                padding: 10px;
+                width: 100%;
+
+                font: {
+                    size: 1.2rem;
+                }
+            }
+
+        }
+
+        .loan-details-content {
+            max-height: 500px;
+            width: 100%;
+            gap: 10px;
+        }
+
+        &-footer {
+            flex-direction: column;
+            gap: 5px;
+
+
+
+        }
+    }
+
+    @media screen and (max-width:$mobile) {
+        max-width: 80%;
+    }
+}
+
+
+
+#loan-edit-modal {
+    z-index: 1000000;
+}
+
+
+.hideModal {
+    display: none;
 }
 
 .content {
@@ -349,6 +261,9 @@ body {
     }
 }
 
+
+
+// animation
 @keyframes unfoldIn {
     0% {
         transform: scaleY(.005) scaleX(0);

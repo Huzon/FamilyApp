@@ -15,14 +15,15 @@ function openModal(btnInfo) {
     //getting button class and using split in case the button has other classes
     var buttonClass = $(btnInfo).attr('class').split(" ")[0];
     $modal =
-        $('#' + buttonClass + "-modal").addClass("modal-animation-two").removeClass("out");
+        $('#' + buttonClass + "-modal").addClass("modal-animation").removeClass("out");
     $('body').addClass('modal-active');
+
 }
 // $('.loan-details').click(function () {
 //     //getting button class and using split in case the button has other classes
 //     var buttonClass = $(this).attr('class').split(" ")[0];
 //     $modal =
-//         $('#' + buttonClass + "-modal").addClass("modal-animation-two").removeClass("out");
+//         $('#' + buttonClass + "-modal").addClass("modal-animation").removeClass("out");
 //     $('body').addClass('modal-active');
 // })
 

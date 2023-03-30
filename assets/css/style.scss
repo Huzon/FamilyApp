@@ -300,6 +300,49 @@ button {
     }
 }
 
+.loan-details-content {
+    padding: 20px;
+
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+
+    // background-color: #fff;
+    row-gap: 20px;
+    column-gap: 50px;
+
+    @media screen and (max-width:$tablet) {
+        .loan-details-content {
+            padding: 0;
+            border-radius: 0;
+
+
+            h5 {
+                font: {
+                    size: 1rem;
+                }
+            }
+
+            td,
+            th {
+                font: {
+                    size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.loan-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 //ComanyDetails Page
 .companyDetails {
 
@@ -320,11 +363,37 @@ button {
 
 .partner-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
     align-content: center;
     gap: 30px;
+
+    @media screen and (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.partnerCard {
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+
+    img {
+        height: 150px; // aspect-ratio: 1;
+
+    }
+
+    div {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
 }
 
 .grid-item {
