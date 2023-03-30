@@ -42,10 +42,13 @@ button {
     background-repeat: no-repeat;
 }
 
-.cardDiv {
+
+.CardDiv {
     gap: 30px;
     display: flex;
-    padding: 100px;
+    padding: 50px;
+    max-width: 80%;
+    max-height: 570px;
     border-radius: 15px;
     align-items: center;
     height: fit-content;
@@ -53,6 +56,14 @@ button {
     flex-direction: column;
     background: rgba(230, 212, 192, 0.2);
     box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.5), 10px 10px 20px rgba(209, 188, 164, 0.5);
+
+    &#login {
+        padding: 100px;
+        max-width: none;
+        max-height: none;
+    }
+
+
 
     form {
         display: flex;
@@ -361,6 +372,13 @@ button {
     }
 }
 
+.basic-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 700px;
+}
+
 .partner-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -381,18 +399,38 @@ button {
     text-align: center;
     border-radius: 20px;
     display: flex;
+    align-items: center;
+    gap: 10px;
 
     img {
-        height: 150px; // aspect-ratio: 1;
+        height: 75px; // aspect-ratio: 1;
 
     }
 
-    div {
+    .download {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 20px;
-        column-gap: 10px;
+        button {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        // display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        // row-gap: 20px;
+        // column-gap: 10px;
+
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: start;
+        justify-content: start;
     }
 }
 

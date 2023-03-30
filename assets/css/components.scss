@@ -530,6 +530,7 @@ thead {
 
 
 
+
 input {
     width: 300px;
     border: none;
@@ -884,3 +885,9 @@ $grid-spans: 1, 2, 3, 4, 5, 6;
 // .span3 {
 //     grid-column: span 1;
 // }
+
+
+//ishara added
+.error {
+    font-size: 12px !important;
+}
