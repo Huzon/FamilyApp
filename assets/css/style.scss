@@ -23,10 +23,10 @@ button {
 
 .main {
     margin-top: 100px;
+    overflow-y: auto;
 
     @media screen and (min-width: $tablet) {
         margin-left: 100px;
-
     }
 }
 
@@ -390,6 +390,11 @@ button {
     @media screen and (max-width: $tablet) {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    @media screen and (max-width: $mobile) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 
 }
 

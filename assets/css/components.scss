@@ -211,6 +211,17 @@ $tablet: 1000px;
 
         }
 
+        &.selected {
+            img {
+                background-color: $primary;
+                box-shadow: 1px 1px 10px rgba($darkPrimary, 1);
+            }
+
+
+
+        }
+
+
     }
 
     .role-change {
@@ -454,6 +465,23 @@ td {
 tr:hover {
     cursor: pointer;
     background-color: #E6D4C0;
+}
+
+.custom-table {
+    overflow-x: auto;
+
+    @media screen and (max-width: $tablet) {
+
+
+        td,
+        th {
+            font: {
+                size: 1rem;
+            }
+        }
+
+        // padding-left: none;
+    }
 }
 
 //dashboard to show data
