@@ -1590,6 +1590,8 @@ button {
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   max-width: 700px;
+  row-gap: 10px;
+  column-gap: 5px;
 }
 
 .partner-grid {
@@ -1649,6 +1651,75 @@ button {
 
 .detail-tile h6 {
   color: #808080;
+}
+
+h2 {
+  margin: 50px 0;
+}
+
+section {
+  flex-grow: 1;
+}
+
+.file-drop-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(248, 238, 226);
+  max-width: 100%;
+  padding: 25px;
+  border: 1px dashed rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+.file-drop-area.is-active {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.fake-btn {
+  flex-shrink: 0;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-msg {
+  font-size: small;
+  font-weight: 300;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.file-input:focus {
+  outline: none;
+}
+
+footer {
+  margin-top: 50px;
+}
+footer a {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: none;
+}
+footer a:hover {
+  color: rgb(248, 238, 226);
 }
 
 /*# sourceMappingURL=style.css.map */
