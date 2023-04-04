@@ -11,26 +11,18 @@ function goto($link) {
 //OPENING LOAN DETAILS
 
 function openModal(btnInfo) {
-    // console.log($(btnInfo).attr('class'));
-    //getting button class and using split in case the button has other classes
+
     var buttonClass = $(btnInfo).attr('class').split(" ")[0];
     $modal =
         $('#' + buttonClass + "-modal").addClass("modal-animation").removeClass("out");
     $('body').addClass('modal-active');
 
 }
-// $('.loan-details').click(function () {
-//     //getting button class and using split in case the button has other classes
-//     var buttonClass = $(this).attr('class').split(" ")[0];
-//     $modal =
-//         $('#' + buttonClass + "-modal").addClass("modal-animation").removeClass("out");
-//     $('body').addClass('modal-active');
-// })
 
 $('.close-modal-btn').click(function () {
     //getting parent modal id to close it
-    var modalId = $(this).parent().parent().parent().attr("id");
-    $("#" + modalId).addClass('out');
+    var modal = $(this).closest(".modal-container"); //imporved code -> 4Apr23
+    modal.addClass('out');
     $('body').removeClass('modal-active');
 });
 
@@ -66,3 +58,4 @@ function userRoleToggle() {
     var toggleMenu = $(".role-menu");
     toggleMenu.toggleClass("active");
 }
+

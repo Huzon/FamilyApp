@@ -129,12 +129,17 @@ body {
         // padding: 20px;
         border-radius: 20px;
         background-color: #fff;
-        gap: 10px;
-        display: flex;
         padding: 50px 150px;
         position: relative;
         max-height: 80vh;
         flex-direction: column;
+        gap: 10px;
+        display: flex;
+
+        &.add-company {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         .form-title {
             // top: 15px;

@@ -19,12 +19,13 @@
     <script src="https://kit.fontawesome.com/84cd854e91.js" defer crossorigin="anonymous" defer></script>
     <script src="./assets/js/main.js" defer></script>
 
-    <title>Loans</title>
+    <title>Companiess</title>
 
 
 </head>
 
 <body>
+    <!-- HEADER -->
     <div class="topbar">
         <div class="start">
             <button class="img-btn" onclick="goto('home')" style="background-image:url('./assets/img/Logo.png')">
@@ -39,7 +40,7 @@
             </div>
         </div>
         <!-- <div class="title">
-            <h4>Loans</h4>
+            <h4>Companiess</h4>
         </div> -->
         <div class="end">
             <i class="fas fa-user" onclick="userMenuToggle()"></i>
@@ -71,13 +72,13 @@
 
             <div class="sections" onclick="goto('loans')">
                 <img class="transparent-right" src="./assets/img/section-loan.png" alt="">
-                <h6>Loan</h6>
+                <h6>Companies</h6>
             </div>
-            <div class="sections selected" onclick="goto('company')">
+            <div class="sections" onclick="goto('company')">
                 <img class="transparent-right" src="./assets/img/section-company.png" alt="">
                 <h6>Company</h6>
             </div>
-            <div class="sections">
+            <div class="sections" onclick="goto('property')">
                 <img class="transparent-right" src="./assets/img/section-property.png" alt="">
                 <h6>Property</h6>
             </div>
@@ -102,788 +103,293 @@
         </div>
 
     </nav>
+
+    <!-- MAIN -->
     <section class="main">
         <h3 class="page-title">My Companies</h3>
         <!-- h1 -->
-        <div class="companyDetails">
-
-
-            <div>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                        type="button" role="tab" aria-controls="nav-home" aria-selected="true">Basic Details</button>
-                    <!-- <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
-                        type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Documents</button> -->
-                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact"
-                        type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Partners</button>
+        <div class="detailsTab">
+            <div class="gc-span-1 gc-span-m-2">
+                <h5 class="title">Dashboard</h5>
+                <div class="dashboard">
+                    <div class="dashboard-card gc-span-1">
+                        <h6 class="fw-l">Companies</h6>
+                        <h4 class="fw-b">10</h4>
+                    </div>
+                    <div class="dashboard-card gc-span-1">
+                        <h6 class="fw-l">Companies Recieved</h6>
+                        <h4 class="fw-b">AED 20000</h4>
+                    </div>
+                    <div class="dashboard-card gc-span-1">
+                        <h6 class="fw-l">Companies Issued</h6>
+                        <h4 class="fw-b">AED 200000</h4>
+                    </div>
+                    <div class="dashboard-card gc-span-1">
+                        <h6 class="fw-l">Companies Recieved</h6>
+                        <h4 class="fw-b">AED 20000</h4>
+                    </div>
+                    <div class="dashboard-card gc-span-2">
+                        <h6 class="fw-l">Pending Companiess</h6>
+                        <h4 class="fw-b">20</h4>
+                    </div>
                 </div>
             </div>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
-                    <div class="basic-details">
-                        <div class="detail-tile">
-                            <h6>Company Name</h6>
-                            <h5>Mrs. Khaula Rashid</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Contact No</h6>
-                            <h5>Approved</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Email</h6>
-                            <h5>Require loan for personal user</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Address</h6>
-                            <h5>10 yrs</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Authorized Signatory</h6>
-                            <h5>AED 20000</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Authorized PRO</h6>
-                            <h5>AED 10000</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>trade license no </h6>
-                            <h5>NA</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Trade Lisence Renewal</h6>
-                            <h5>NA</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Ejari</h6>
-                            <h5>NA</h5>
-                        </div>
-                        <div class="detail-tile">
-                            <h6>Ejari Renewal</h6>
-                            <h5>NA</h5>
-                        </div>
-                    </div>
-
-
-                    <div class="accordion accordion-flush" style="grid-column: 1/span 2;">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="ijari-1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#ijari1-collapse" aria-expanded="false"
-                                    aria-controls="ijari1-collapse">
-                                    Ijari
-                                </button>
-                            </h2>
-                            <div id="ijari1-collapse" class="accordion-collapse collapse show" aria-labelledby="Ijari 1"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table class="width100 custom-table" style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Ijari Number</th>
-                                                <th>Issue Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Attachment</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Trade Lisence
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table class="width100 custom-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Issued Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Attachment</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Establishment Card
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table class="width100 custom-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Establishment Card No.</th>
-                                                <th>Issued Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Attachment</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFour">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                    aria-controls="flush-collapseFour">
-                                    Bank Accounts
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body p-0">
-                                <table class="width100 custom-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Expiry Date</th>
-                                            <th>Issued By</th>
-                                            <th>Issuer Remarks</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <tr>
-                                            <td>IJ1232121232</td>
-                                            <td>23/03/2023</td>
-                                            <td>24/03/2024</td>
-                                            <td><button class="width100">Download</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>IJ1232121232</td>
-                                            <td>23/03/2023</td>
-                                            <td>24/03/2024</td>
-                                            <td><button class="width100">Download</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>IJ1232121232</td>
-                                            <td>23/03/2023</td>
-                                            <td>24/03/2024</td>
-                                            <td><button class="width100">Download</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>IJ1232121232</td>
-                                            <td>23/03/2023</td>
-                                            <td>24/03/2024</td>
-                                            <td><button class="width100">Download</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>IJ1232121232</td>
-                                            <td>23/03/2023</td>
-                                            <td>24/03/2024</td>
-                                            <td><button class="width100">Download</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                    <div class="partner-grid">
-
-
-                        <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!--      <div class="grid-item">
-                            <div class="partnerCard">
-                                <img src="./assets/img/logo1.png" alt="">
-                                <div class="info">
-                                    <h6>Hozefa Mohammed Hussain</h6>
-                                    <p>Partner</p>
-                                    <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
-
-                                </div>
-
-                                <div class="download">
-                                    <button class="download-btn small"><span>Emirated ID</span> <i
-                                            class="fas fa-download"></i></button>
-                                    <button class="download-btn small"><span>Passport</span> <i
-                                            class="fas fa-download"></i></button>
-                                </div>
-                            </div>
-                        </div> -->
-
-
-                    </div>
-
-
-                    <!-- <div class="btn-group">
-                <button class="tab-btn" onclick="changeTab('company-tab-1')">Basic Details</button>
-                <button class="tab-btn" onclick="changeTab('company-tab-2')">Documents</button>
-                <button class="tab-btn" onclick="changeTab('company-tab-3')">Partners</button>
-            </div> -->
-
-                    <!-- <div class="tab-content">
-                <div id="company-tab-1" class="tab-item grid2x hide">
-                    <div class="detail-tile">
-                        <h6>Company Name</h6>
-                        <h5>Mrs. Khaula Rashid</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Contact No</h6>
-                        <h5>Approved</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Email</h6>
-                        <h5>Require loan for personal user</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Address</h6>
-                        <h5>10 yrs</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Authorized Signatory</h6>
-                        <h5>AED 20000</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Authorized PRO</h6>
-                        <h5>AED 10000</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>trade license no </h6>
-                        <h5>NA</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Trade Lisence Renewal</h6>
-                        <h5>NA</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Ejari</h6>
-                        <h5>NA</h5>
-                    </div>
-                    <div class="detail-tile">
-                        <h6>Ejari Renewal</h6>
-                        <h5>NA</h5>
-                    </div>
-                </div>
-                <div id="company-tab-2" class="tab-item hide">
-                    <div class="accordion accordion-flush" style="grid-column: 1/span 2;">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="ijari-1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#ijari1-collapse" aria-expanded="false"
-                                    aria-controls="ijari1-collapse">
-                                    Ijari
-                                </button>
-                            </h2>
-                            <div id="ijari1-collapse" class="accordion-collapse collapse show" aria-labelledby="Ijari 1"
-                                data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Issued By</th>
-                                                <th>Issuer Remarks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Trade Lisence
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Issued By</th>
-                                                <th>Issuer Remarks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Establishment Card
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Issued By</th>
-                                                <th>Issuer Remarks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFour">
-                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                    aria-controls="flush-collapseFour">
-                                    Bank Accounts
-                                </button>
-                            </h2>
-                        </div>
-                            <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body p-0">
-                                    <table style="width: 100%;">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Expiry Date</th>
-                                                <th>Issued By</th>
-                                                <th>Issuer Remarks</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>IJ1232121232</td>
-                                                <td>23/03/2023</td>
-                                                <td>24/03/2024</td>
-                                                <td><button class="width100">Download</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="company-tab-3" class="tab-item partner-grid">
-                    <div class="grid-item">
-                        <div class="partnerCard">
-                            <img src="./assets/img/logo1.png" alt="">
-                            <h6>Hozefa Mohammed Hussain</h6>
-                            <p>Partner</p>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <p>huz@gmail.com</p>
-                            </div>
-                            <div>
-                                <button class="download-btn small">Emirated ID <i class="fas fa-download"></i></button>
-                                <button class="download-btn small">Passport <i class="fas fa-download"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="partnerCard">
-                            <img src="./assets/img/logo1.png" alt="">
-                            <h6>Hozefa Mohammed Hussain</h6>
-                            <p>Partner</p>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <p>huz@gmail.com</p>
-                            </div>
-                            <div>
-                                <button class="download-btn small">Emirated ID <i class="fas fa-download"></i></button>
-                                <button class="download-btn small">Passport <i class="fas fa-download"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="partnerCard">
-                            <img src="./assets/img/logo1.png" alt="">
-                            <h6>Hozefa Mohammed Hussain</h6>
-                            <p>Partner</p>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <p>huz@gmail.com</p>
-                            </div>
-                            <div>
-                                <button class="download-btn small">Emirated ID <i class="fas fa-download"></i></button>
-                                <button class="download-btn small">Passport <i class="fas fa-download"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="partnerCard">
-                            <img src="./assets/img/logo1.png" alt="">
-                            <h6>Hozefa Mohammed Hussain</h6>
-                            <p>Partner</p>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <p>huz@gmail.com</p>
-                            </div>
-                            <div>
-                                <button class="download-btn small">Emirated ID <i class="fas fa-download"></i></button>
-                                <button class="download-btn small">Passport <i class="fas fa-download"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="partnerCard">
-                            <img src="./assets/img/logo1.png" alt="">
-                            <h6>Hozefa Mohammed Hussain</h6>
-                            <p>Partner</p>
-                            <div>
-                                <i class="fas fa-envelope"></i>
-                                <p>huz@gmail.com</p>
-                            </div>
-                            <div>
-                                <button class="download-btn small">Emirated ID <i class="fas fa-download"></i></button>
-                                <button class="download-btn small">Passport <i class="fas fa-download"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
+            <div class="gc-span-1 gc-span-m-2">
+                <h5 class="title">Graph - Issued/Recieved</h5>
+                <div class="graphs">
+                    <img src="./assets/img/dummy-graph.svg">
+                    <h5 class="regular">Total Companiess issued/recieved</h5>
                 </div>
             </div>
+            <div class="gc-span-2">
+                <h5 class="title">Companies List</h5>
+                <div class="list-data">
+
+                    <div class="filters">
+
+                        <div class="list-data-button-grp">
+                            <button onclick="openModal(this)" class="add-signatory">+ Signatory</button>
+                            <button onclick="openModal(this)" class="add-pro">+ PRO</button>
+                        </div>
+
+                        <form action=""><input type="text" class="input-search" name="search" id="search"
+                                placeholder="Search">
+                        </form>
+                    </div>
+                    <!-- Companies tile -->
+                    <div class="tiles">
+                        <div class="tile">
+                            <div class="justify-start">
+                                <h5>Al Wahdania</h5>
+                                <h6>+971522362362</h6>
+                                <h6>alwahdania@tdgib.com</h6>
+                            </div>
+                            <div class="justify-end">
+                                <h5>906, Bay Square</h5>
+                                <h6>Mrs. Khawla Rashid</h6>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <div class="justify-start">
+                                <h5>Al Wahdania</h5>
+                                <h6>+971522362362</h6>
+                                <h6>alwahdania@tdgib.com</h6>
+                            </div>
+                            <div class="justify-end">
+                                <h5>906, Bay square</h5>
+                                <h6>Mrs. Khawla Rashid</h6>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <div class="justify-start">
+                                <h5>Al Wahdania</h5>
+                                <h6>+971522362362</h6>
+                                <h6>alwahdania@tdgib.com</h6>
+                            </div>
+                            <div class="justify-end">
+                                <h5>906, Bay square</h5>
+                                <h6>Mrs. Khawla Rashid</h6>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <div class="justify-start">
+                                <h5>Al Wahdania</h5>
+                                <h6>+971522362362</h6>
+                                <h6>alwahdania@tdgib.com</h6>
+                            </div>
+                            <div class="justify-end">
+                                <h5>906, Bay square</h5>
+                                <h6>Mrs. Khawla Rashid</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <table class="width100" cellspacing=0>
+                            <thead>
+                                <tr>
+                                    <th>Company Name</th>
+                                    <th>Contact No</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Authorized Signatory</th>
+                                    <th>Authorized PRO</th>
+
+                                </tr>
+                            </thead>
+                            <tbody style="overflow-y: scroll;">
+                                <tr class="Companies-details" onclick="goto('company-details')">
+                                    <td>Al Wahdania</td>
+                                    <td>+971522132323</td>
+                                    <td>alWahdania@tdgib.com</td>
+                                    <td>906, Building 12, Bay Square, Dubai, UAE</td>
+                                    <td>Mrs. Khawla Rashid</td>
+                                    <td>Mr. Abdul</td>
+                                    <!-- <td>Require for personal use</td>
+                                        <td>Companies Approved</td>
+                                        <td>Companies has been approved</td> -->
+
+                                </tr>
+                                <tr class="Companies-details" onclick="goto('company-details')">
+                                    <td>Al Wahdania</td>
+                                    <td>+971522132323</td>
+                                    <td>alWahdania@tdgib.com</td>
+                                    <td>906, Building 12, Bay Square, Dubai, UAE</td>
+                                    <td>Mrs. Khawla Rashid</td>
+                                    <td>Mr. Abdul</td>
+                                    <!-- <td>Require for personal use</td>
+                                        <td>Companies Approved</td>
+                                        <td>Companies has been approved</td> -->
+
+                                </tr>
+                                <tr class="Companies-details" onclick="goto('company-details')">
+                                    <td>Al Wahdania</td>
+                                    <td>+971522132323</td>
+                                    <td>alWahdania@tdgib.com</td>
+                                    <td>906, Building 12, Bay Square, Dubai, UAE</td>
+                                    <td>Mrs. Khawla Rashid</td>
+                                    <td>Mr Javed</td>
+                                    <!-- <td>Require for personal use</td>
+                                        <td>Companies Approved</td>
+                                        <td>Companies has been approved</td> -->
+
+                                </tr>
+                                <a href="company">
+                                    <tr class="Companies-details" onclick="goto('company-details')">
+                                </a>
+                                <td>Al Wahdania</td>
+                                <td>+971522132323</td>
+                                <td>alWahdania@tdgib.com</td>
+                                <td>906, Building 12, Bay Square, Dubai, UAE</td>
+                                <td>Mrs. Khawla Rashid</td>
+                                <td>Mr. Abdul</td>
+                                <!-- <td>Require for personal use</td>
+                                        <td>Companies Approved</td>
+                                        <td>Companies has been approved</td> -->
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
     </section>
-    <button aria-readonly="true" onClick="openModal(this)" class="company-add floating-btn add-btn button modal-toggle">
-        <i class="fa fa-plus"></i>
-    </button>
-    <button aria-readonly="true" id="addLoan" class="floating-btn add-btn modal-toggle">
+    <button aria-readonly="true" onclick="openModal(this)"
+        class="Companies-request floating-btn add-btn button modal-toggle">
         <i class="fa fa-plus"></i>
     </button>
 
+
+    <div id="Companies-request-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <Address></Address> Companies
+                    </div>
+                    <div class="modal-body">
+                        <form class="modal-body-form add-company">
+                            <input type="text" name="RequesterName" id="" placeholder="Name">
+                            <input type="text" name="" id="" placeholder="Contact No">
+                            <input type="text" name="" id="" placeholder="Email">
+                            <input type="text" name="" id="" placeholder="Address">
+                            <input type="text" name="" id="" placeholder="Authorized Signatory">
+                            <input type="text" name="" id="" placeholder="Authorized PRO">
+                            <input type="submit" value="Submit" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="add-signatory-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">Add Signatory</div>
+                    <div class="modal-body">
+                        <form class="modal-body-form">
+                            <input type="text" name="RequesterName" id="" placeholder="Name">
+                            <input type="text" name="" id="" placeholder="Contact No">
+                            <input type="text" name="" id="" placeholder="Email">
+                            <input type="text" name="" id="" placeholder="Address">
+
+                            <input type="submit" value="Submit" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="add-pro-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">Add PRO</div>
+                    <div class="modal-body">
+                        <form class="modal-body-form">
+                            <input type="text" name="RequesterName" id="" placeholder="Name">
+                            <input type="text" name="" id="" placeholder="Contact No">
+                            <input type="text" name="" id="" placeholder="Email">
+                            <input type="text" name="" id="" placeholder="Address">
+
+                            <input type="submit" value="Submit" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <div id="modal-container">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <form action="">
+                    <h3 class="form-title fw-b">
+                        Request Companies
+                    </h3>
+
+                    <input type="text" name="RequesterName" id="" placeholder="Name">
+                    <input type="text" name="" id="" placeholder="Amount">
+                    <input type="text" name="" id="" placeholder="Tenure">
+                    <input type="text" name="" id="" placeholder="Comments">
+                    <input type="submit" value="Submit" name="submit" class="modal-toggle">
+                </form>
+                <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                    preserveAspectRatio="none">
+                    <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                </svg>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- FOOTER -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -894,23 +400,33 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
     <script>
-        function changeTab($v) {
-            const screen = 'company-';
-            $(".tab-item").addClass('hide');
-            switch ($v) {
-                case screen + 'tab-1':
-                    $("#" + $v).removeClass('hide');
-                    break;
-                case screen + 'tab-2':
-                    $("#" + $v).removeClass('hide');
-                    break;
-                case screen + 'tab-3':
-                    $("#" + $v).removeClass('hide');
-                    break;
-                default:
-                    break;
+        var $fileInput = $('.file-input');
+        var $droparea = $('.file-drop-area');
+
+        // highlight drag area
+        $fileInput.on('dragenter focus click', function () {
+            $droparea.addClass('is-active');
+        });
+
+        // back to normal state
+        $fileInput.on('dragleave blur drop', function () {
+            $droparea.removeClass('is-active');
+        });
+
+        // change inner text
+        $fileInput.on('change', function () {
+            var filesCount = $(this)[0].files.length;
+            var $textContainer = $(this).prev();
+
+            if (filesCount === 1) {
+                // if single file is selected, show file name
+                var fileName = $(this).val().split('\\').pop();
+                $textContainer.text(fileName);
+            } else {
+                // otherwise show number of files
+                $textContainer.text(filesCount + ' files selected');
             }
-        }
+        });
     </script>
 
 </body>

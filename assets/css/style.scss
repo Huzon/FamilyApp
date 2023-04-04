@@ -280,12 +280,12 @@ button {
 
     }
 
-    .history {
+    .tiles {
         display: none;
     }
 
     @media only screen and (max-width: 768px) {
-        .history {
+        .tiles {
             display: block;
 
         }
@@ -357,8 +357,8 @@ button {
 //ComanyDetails Page
 .companyDetails {
 
-    margin: 15px;
-    padding: 10px;
+    // margin: 15px;
+    padding: 10px 30px;
 
     height: calc(100vh - 80px);
 
