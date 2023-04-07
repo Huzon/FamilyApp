@@ -487,7 +487,8 @@ thead {
   background-color: rgb(238, 220, 200);
 }
 
-input {
+input,
+select {
   width: 300px;
   border: none;
   padding: 20px;
@@ -496,20 +497,24 @@ input {
   font-weight: 500;
   font-size: 1.5rem;
 }
-input::placeholder {
+input::placeholder,
+select::placeholder {
   color: #B8874F;
 }
-input[type=submit] {
+input[type=submit],
+select[type=submit] {
   width: 100%;
   color: #B8874F;
   border-radius: 30px;
   background: #E6D4C0;
   box-shadow: 10px 10px 10px rgba(209, 188, 164, 0.5), -10px -10px 10px rgba(255, 255, 255, 0.5);
 }
-input.border-dark {
+input.border-dark,
+select.border-dark {
   border: 3px solid rgb(184, 135, 79) !important;
 }
-input.small {
+input.small,
+select.small {
   font-size: 1rem;
   border-radius: 10px;
   padding: 10px 5px;
@@ -926,13 +931,18 @@ body.modal-active {
   margin-bottom: 20px;
 }
 .modal .modal-body-form input,
-.modal .modal-body-form textarea {
+.modal .modal-body-form textarea,
+.modal .modal-body-form select {
   background-color: rgb(255, 250, 244);
   border: 2px solid rgb(238, 220, 200);
   color: rgb(184, 135, 79);
 }
 .modal .modal-body-form input::placeholder,
-.modal .modal-body-form textarea::placeholder {
+.modal .modal-body-form textarea::placeholder,
+.modal .modal-body-form select::placeholder {
+  color: #beb9b9;
+}
+.modal .modal-body-form select:invalid {
   color: #beb9b9;
 }
 .modal .modal-body-form input[type=submit] {
@@ -955,7 +965,8 @@ body.modal-active {
     padding: 0;
   }
   .modal .modal-body-form input,
-.modal .modal-body-form textarea {
+.modal .modal-body-form textarea,
+.modal .modal-body-form select {
     padding: 10px;
     width: 100%;
     font-size: 1.2rem;
