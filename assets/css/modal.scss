@@ -172,6 +172,15 @@ body {
             background-color: $darkPrimary;
 
         }
+
+        .dropdown {
+            .dropdown-label {
+                background-color: $veryLightPrimary;
+                border: 2px solid $primary;
+                color: $darkPrimary;
+
+            }
+        }
     }
 
     .loan-details-content {

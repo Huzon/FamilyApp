@@ -381,15 +381,16 @@ button {
     column-gap: 5px;
 }
 
-.partner-grid {
+.user-grid {
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 400px);
     align-items: center;
     justify-content: center;
     align-content: center;
     gap: 30px;
 
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 1500px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -400,19 +401,37 @@ button {
 
 }
 
-.partnerCard {
+
+.user-card {
     box-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     border-radius: 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
+    width: 100%;
 
-    img {
-        height: 75px; // aspect-ratio: 1;
-
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 60%;
+        align-items: start;
+        justify-content: start;
     }
+
+    h6 {
+        text-align: start;
+        height: 40px;
+
+        overflow: hidden;
+    }
+}
+
+.partner-card {
+    @extend .user-card;
 
     .download {
         display: flex;
@@ -420,6 +439,7 @@ button {
         gap: 10px;
 
         button {
+            height: 100%;
             display: flex;
             justify-content: space-between;
             gap: 10px;
@@ -432,13 +452,7 @@ button {
 
     }
 
-    .info {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        align-items: start;
-        justify-content: start;
-    }
+
 }
 
 .grid-item {
