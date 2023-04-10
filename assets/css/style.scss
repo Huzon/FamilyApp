@@ -4,6 +4,7 @@
 @import "components";
 @import "modal";
 
+
 body,
 div,
 input,
@@ -379,27 +380,44 @@ button {
     max-width: 700px;
     row-gap: 10px;
     column-gap: 5px;
+
+    @media screen and (max-width: $mobile) {
+        text-align: start;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .user-grid {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(5, 250px);
     align-items: center;
     justify-content: center;
     align-content: center;
     gap: 30px;
 
     @media screen and (max-width: 1500px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @media screen and (max-width: $mobile) {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 300px);
     }
 
+    &.partner-grid {
+        grid-template-columns: repeat(3, 400px);
+
+        @media screen and (max-width: 1500px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 
 }
+
 
 
 .user-card {
@@ -408,16 +426,21 @@ button {
     text-align: center;
     border-radius: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+
     gap: 10px;
     width: 100%;
 
     .info {
+        h6 {
+            color: $darkPrimary;
+
+        }
+
         display: flex;
         flex-direction: column;
         gap: 0;
-        width: 60%;
+
         align-items: start;
         justify-content: start;
     }
@@ -432,13 +455,28 @@ button {
 
 .partner-card {
     @extend .user-card;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+
+
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 60%;
+        align-items: start;
+        justify-content: start;
+    }
 
     .download {
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        button {
+        .download-btn {
             height: 100%;
             display: flex;
             justify-content: space-between;

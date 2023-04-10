@@ -17,3 +17,21 @@
     color: #000;
     outline: none;
 }
+
+.tab-pane {
+    text-align: center;
+}
+
+@media screen and (max-width: $mobile) {
+    .nav-link {
+        padding: 5px;
+    }
+
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    // grid-template-columns: repeat(3, 1fr);
+}

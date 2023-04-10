@@ -8,7 +8,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./assets/css/style.css">
 
 
@@ -120,7 +119,7 @@
                 </div>
             </div>
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
                     <div class="basic-details">
                         <div class="detail-tile">
@@ -375,7 +374,8 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-partners" role="tabpanel" aria-labelledby="nav-partners-tab">
-                    <div class="user-grid">
+                    <button class="select-partner add-user-btn" onclick="openModal(this)">Assign Partner</button>
+                    <div class="user-grid partner-grid">
                         <div class="grid-item">
                             <div class="partner-card">
 
@@ -390,6 +390,9 @@
                                             class="fas fa-download"></i></button>
                                     <button class="download-btn small"><span>Passport</span> <i
                                             class="fas fa-download"></i></button>
+                                    <button class="delete-btn width100" onclick="deletePartner()">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -408,6 +411,9 @@
                                             class="fas fa-download"></i></button>
                                     <button class="download-btn small"><span>Passport</span> <i
                                             class="fas fa-download"></i></button>
+                                    <button class="delete-btn width100" onclick="deletePartner()">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -426,6 +432,9 @@
                                             class="fas fa-download"></i></button>
                                     <button class="download-btn small"><span>Passport</span> <i
                                             class="fas fa-download"></i></button>
+                                    <button class="delete-btn width100" onclick="deletePartner()">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -444,6 +453,9 @@
                                             class="fas fa-download"></i></button>
                                     <button class="download-btn small"><span>Passport</span> <i
                                             class="fas fa-download"></i></button>
+                                    <button class="delete-btn width100" onclick="deletePartner()">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -462,13 +474,16 @@
                                             class="fas fa-download"></i></button>
                                     <button class="download-btn small"><span>Passport</span> <i
                                             class="fas fa-download"></i></button>
+                                    <button class="delete-btn width100" onclick="deletePartner()">
+                                        <i class="fas fa-trash"></i> Remove
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade show active" id="nav-signatories" role="tabpanel"
-                    aria-labelledby="nav-signatories-tab">
+                <div class="tab-pane fade" id="nav-signatories" role="tabpanel" aria-labelledby="nav-signatories-tab">
+                    <button class="select-signatory add-user-btn" onclick="openModal(this)">Assign Signatory</button>
                     <div class="user-grid">
                         <div class="grid-item">
                             <div class="user-card">
@@ -478,6 +493,9 @@
                                     <p><i class="fas fa-phone-alt"></i> 0508237463</p>
                                     <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
                                 </div>
+                                <button class="delete-btn" onclick="deleteSignatory()">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
                             </div>
                         </div>
                         <div class="grid-item">
@@ -488,12 +506,16 @@
                                     <p><i class="fas fa-phone-alt"></i> 0508237463</p>
                                     <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
                                 </div>
+                                <button class="delete-btn" onclick="deleteSignatory()">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
                             </div>
                         </div>
 
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-pros" role="tabpanel" aria-labelledby="nav-pros-tab">
+                    <button class="select-pro add-user-btn" onclick="openModal(this)">Assign PRO</button>
                     <div class="user-grid">
                         <div class="grid-item">
                             <div class="user-card">
@@ -503,6 +525,9 @@
                                     <p><i class="fas fa-phone-alt"></i> 0508237463</p>
                                     <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
                                 </div>
+                                <button class="delete-btn" onclick="deletePRO()">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
                             </div>
                         </div>
                         <div class="grid-item">
@@ -513,6 +538,9 @@
                                     <p><i class="fas fa-phone-alt"></i> 0508237463</p>
                                     <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
                                 </div>
+                                <button class="delete-btn" onclick="deletePRO()">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
                             </div>
                         </div>
                         <div class="grid-item">
@@ -523,6 +551,9 @@
                                     <p><i class="fas fa-phone-alt"></i> 0508237463</p>
                                     <p><i class="fas fa-envelope"></i> huz@gmail.com</p>
                                 </div>
+                                <button class="delete-btn" onclick="deletePRO()">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
                             </div>
                         </div>
 
@@ -530,9 +561,101 @@
                 </div>
             </div>
     </section>
-    <button aria-readonly="true" onClick="openModal(this)" class="company-add floating-btn add-btn button modal-toggle">
-        <i class="fa fa-pencil"></i>
-    </button>
+
+    <div id="select-signatory-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Assign Signatory
+                    </div>
+                    <div class="modal-body">
+                        <form class="modal-body-form">
+
+                            <select name="signatories" id="signatories" required>
+                                <option value="" disabled selected hidden>Select Option</option>
+                                <option value="Hozefa">Mr. Hozefa</option>
+                                <option value="Vivan">Mr. vivan</option>
+                                <option value="Ishara">Mr. Isahra</option>
+
+                            </select>
+
+                            <input type="submit" value="Add" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="select-pro-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Assign PRO
+                    </div>
+                    <div class="modal-body">
+                        <form class="modal-body-form">
+
+                            <select name="signatories" id="signatories" required>
+                                <option value="" disabled selected hidden>Select Option</option>
+                                <option value="Hozefa">Mr. Hozefa</option>
+                                <option value="Vivan">Mr. vivan</option>
+                                <option value="Ishara">Mr. Isahra</option>
+
+                            </select>
+
+                            <input type="submit" value="Add" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div id="select-partner-modal" class="modal-container">
+        <div class=" modal-background">
+            <div class="modal">
+                <div class="close-modal-btn modal-toggle">
+                    <i class="fa fa-close"></i>
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        Assign Partner
+                    </div>
+                    <div class="modal-body">
+                        <form class="modal-body-form">
+
+                            <select name="signatories" id="signatories" required>
+                                <option value="" disabled selected hidden>Select Option</option>
+                                <option value="Hozefa">Mr. Hozefa</option>
+                                <option value="Vivan">Mr. vivan</option>
+                                <option value="Ishara">Mr. Isahra</option>
+
+                            </select>
+
+                            <input type="submit" value="Add" class="gc-span-2">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -545,7 +668,16 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
 
-
+    <script>
+        function deleteSignatory() {
+            alert("Warning: Would you like to remove the signatory from the company")
+        }
+        function deletePRO() {
+            alert("Warning: Would you like to remove the PRO from the company")
+        } function deletePartner() {
+            alert("Warning: Would you like to remove the Partner from the company")
+        }
+    </script>
 </body>
 
 </html>

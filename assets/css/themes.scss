@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&display=swap');
+$mobile: 786px;
+$tablet: 1000px;
 
 $primary: rgb(238, 220, 200);
 $darkPrimary: rgb(184, 135, 79);
@@ -7,6 +9,7 @@ $veryLightPrimary: rgb(255, 250, 244);
 $errorBG: #FFE1DD;
 $successBG: #E3FFDA;
 $lightText: #cecece;
+$red: rgb(240, 155, 155);
 
 .primary {
     &-bg {
